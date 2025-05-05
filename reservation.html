@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!-- 
+Author: Billy Conard 
+Date: December 10th, 2024
+-->   
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <title>Reservation | Portland Historical Tours</title>
+<!-- Links for fonts and browser tab logos go here too. Other template pages have 6 links (4 for logo images, 2 for fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+  </head>
+    
+  <body>
+      
+    <div id="container"> 
+      
+<!-- Use the header area for the website name or logo -->
+        <header>
+            <a href="index.html"><img src="images/Logo.png" alt="Portland Historical Tours Logo"></a>
+        </header>
+      
+<!-- Use the nav area to add hyperlinks to the other pages within the website -->
+        <nav>
+        
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="info.html">Tour Info</a></li>
+            <li><a href="reservation.html">Reserve</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        
+        </nav>
+      
+<!-- Use the main area to add the main content of the webpage -->      
+  <main>
+      
+      <div id="form">
+        <h2>Book your reservation online today!</h2>
+          
+        <form class="form-grid" action="https://pcc-webdev.com/cis195h/pht/formInfo.php" method="post"><!-- Start Reservation Form -->
+            
+            <fieldset>
+                
+                <legend>Customer Information</legend>
+                <label for="fName">First Name:</label>
+                <input type="text" id="fName" name="fName" required>
+                
+                <label for="lName">Last Name:</label>
+                <input type="text" id="lName" name="lName" required>
+                
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+            </fieldset>
+          
+            <fieldset>
+            
+                <legend>Reservation Form</legend>
+                <label for="tour-choice">Choose your tour:</label>
+                <select name="tour-choice" id="tour-choice" required>
+                    <option value="">(select one)</option>
+                    <option value="downtown">Downtown Tour</option>
+                    <option value="albina">Albina Tour</option>
+                    <option value="landmarks">Landmarks Tour</option>
+                </select>
+                
+            </fieldset>
+            
+            <fieldset>
+                
+                <legend>What is your preffered method of contact?</legend>
+                <label for="email-contact"><input type="radio" name="contact[]" id="email-contact" value="Email">Email</label>
+                
+                <label for="phone-contact"><input type="radio" name="contact[]" id="phone-contact" value="Phone">Phone</label>
+                
+            </fieldset>
+            
+            <fieldset>
+                
+                <legend>Select Your Tour Date</legend>
+                <label for="date"><input type="date" id="date" name="date"></label>
+                
+            </fieldset>
+            
+            <fieldset>
+                
+                <legend>Total Participants</legend>
+                <label for="group">How many people will be in your group?</label>
+                <select name="group" id="group" required>
+                    <option value="">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                
+            </fieldset>
+            
+            <fieldset>
+                
+                <legend>Does anyone in your group have food or drink sensitivities? If so, what are they?</legend>
+                <label for="yes">
+                <input type="radio" name="allergies[]" id="yes" value="Yes">Yes</label>
+                
+                <label for="no"><input type="radio" name="allergies[]" id="no" value="No">No</label>
+                
+                <textarea id="allergy-info" name="allergies" rows="5" cols="50"></textarea>
+                
+            </fieldset>
+            
+            <input type="submit" id="submit" value="Reserve Now" class="button">
+            
+        </form>  
+          
+          
+          
+      </div>
+    
+  </main>
+      
+<!-- Use the footer area to add the webpage footer content -->
+    <footer>
+        <p>&copy; Copyright 2024. All Rights Reserved.</p>
+        <p><a href="mailto:sales@portlandhistoricaltours.com">sales@portlandhistoricaltours.com</a></p>
+    </footer>
+        
+  </div>
+      
+</body>
+</html>
